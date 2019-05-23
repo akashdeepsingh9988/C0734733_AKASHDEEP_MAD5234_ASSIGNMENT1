@@ -12,20 +12,39 @@ package Yelling;
 public class Yelling {
 
     public String scream(String... name) {
+        
+        //============= REQ 1 -  FIRST LETTER IN UPPERCASE ======================//
         boolean isUpperCase = Character.isUpperCase(name[0].charAt(0));
         boolean lowercase2 = Character.isLowerCase(name[0].charAt(1));
         if (isUpperCase == true && lowercase2 == true) {
             return name[0] + "is yelling";
-        } else if (name[0].equals(name[0].toUpperCase())) {
+        }
+        //============= REQ 2 -  NAME IS UPPERCASE  ============================//
+        else if (name[0].equals(name[0].toUpperCase())) {
             return name[0] + "IS YELLING";
-        } else if (name[0] == null) {
+        } 
+        //============= REQ 3 -  NO BODY YELLING ============================//
+        else if (name[0] == null) {
             return "Nobody is yelling";
-        } //for two values
+        } 
+        //============= REQ 4 -  TWO PEOPLE YELLING ============================//
         else if (name[0] != null && name[1] != null) {
             return name[0] + "and" + name[1] + "are yelling";
 
-        }
-        return name[0];
+        }   
+        //============ REQ 5 -  MULTIPLE PEOPLE YELLING ========================//
+        else if (name.length > 2) {
+            int length = name.length;
+            String names = "";
+            for (int i = 0; i < length; i++) {
+                if (i == length - 2) {
+                    names = names + " and ";
+                }
+                names = names + " ," + name[i];
 
+            }
+        }
+
+        return name[0];
     }
 }
