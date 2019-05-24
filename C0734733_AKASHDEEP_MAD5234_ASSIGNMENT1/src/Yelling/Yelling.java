@@ -29,7 +29,7 @@ public class Yelling {
             return name[0] + " is yelling";
         } //============= REQ 2 -  NAME IS UPPERCASE  ============================//
         else if (name[0].equals(name[0].toUpperCase())) {
-            return name[0] + "IS YELLING";
+            return name[0] + " IS YELLING";
         } //============= REQ 3 -  NO BODY YELLING ============================//
         else if (name[0] == null) {
             return "Nobody is yelling";
