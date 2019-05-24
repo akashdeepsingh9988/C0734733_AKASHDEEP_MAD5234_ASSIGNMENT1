@@ -21,6 +21,10 @@ public class Yelling {
     There is only parameter in scream function -> name 
      */
     public String scream(String... name) {
+        
+        if (name == null) {
+            return "Nobody is yelling";
+        }
 
         //============= REQ 1 -  FIRST LETTER IN UPPERCASE ======================//
         boolean isUpperCase = Character.isUpperCase(name[0].charAt(0));
@@ -32,9 +36,7 @@ public class Yelling {
         else if (name[0].equals(name[0].toUpperCase())) {
             return name[0] + " IS YELLING";
         } //============= REQ 3 -  NO BODY YELLING ============================//
-        else if (name[0] == null) {
-            return "Nobody is yelling";
-        } //============= REQ 4 -  TWO PEOPLE YELLING ============================//
+        //============= REQ 4 -  TWO PEOPLE YELLING ============================//
         else if (name[0] != null && name[1] != null) {
             return name[0] + "and" + name[1] + "are yelling";
 

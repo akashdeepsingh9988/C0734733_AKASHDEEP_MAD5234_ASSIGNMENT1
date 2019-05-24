@@ -58,7 +58,7 @@ public class YellingTest {
         assertEquals(expResult, result);
         
            // REQUIREMENT 3 
-        result = instance.scream("");
+        result = instance.scream(null);
         expResult = "Nobody is yelling";
         assertEquals(expResult, result);
         
