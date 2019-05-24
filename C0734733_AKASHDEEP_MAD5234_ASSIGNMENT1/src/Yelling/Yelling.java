@@ -20,6 +20,8 @@ public class Yelling {
     
     There is only parameter in scream function -> name 
      */
+    
+    //============= REQ 3 -  NO BODY YELLING ============================//
     public String scream(String... name) {
         if (name == null) {
             return "Nobody is yelling";
@@ -40,9 +42,9 @@ public class Yelling {
         } //============= REQ 2 -  NAME IS UPPERCASE  ============================//
         else if (name[0].equals(name[0].toUpperCase())) {
             return name[0] + " IS YELLING";
-        } //============= REQ 3 -  NO BODY YELLING ============================//
+        } 
          //============ REQ 5 -  MULTIPLE PEOPLE YELLING ========================//
-        else if (name.length > 2 && name.length < 5) {
+        else if (name.length > 2) {
             int length = name.length;
             String names = "";
             for (int i = 0; i < length; i++) {
@@ -50,7 +52,6 @@ public class Yelling {
                     names = names + " and ";
                 }
                 names = names + " ," + name[i];
-
             }
         } //======== REQ 6 - MULTIPLE PEOPLE YELLING WITH NAME UPPERCASE AND LOWERCASE ===========//
 //        else if (name.length > 2) {

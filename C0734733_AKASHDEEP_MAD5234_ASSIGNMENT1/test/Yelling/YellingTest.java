@@ -67,6 +67,13 @@ public class YellingTest {
         expResult = "Jenelle and Kadeem are yelling";
         assertEquals(expResult, result);
       
+            // REQUIREMENT 5
+        result = instance.scream("Jenelle","Kadeem", "Akash");
+        expResult = "Jenelle and Kadeem and Akash are yelling";
+        System.out.println(result);
+        assertEquals(expResult, result);
+      
+        
     }
     
 }
