@@ -21,14 +21,13 @@ public class Yelling {
     There is only parameter in scream function -> name 
      */
     public String scream(String... name) {
-        
         if (name == null) {
             return "Nobody is yelling";
         }
         
         //============= REQ 4 -  TWO PEOPLE YELLING ============================//
         else if (name.length > 1) {
-            return name[0] + " and" + name[1] + " are yelling";
+            return name[0] + " and " + name[1] + " are yelling";
 
         }
                            
