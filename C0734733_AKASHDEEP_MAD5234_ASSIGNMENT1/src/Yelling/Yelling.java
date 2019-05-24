@@ -25,6 +25,12 @@ public class Yelling {
         if (name == null) {
             return "Nobody is yelling";
         }
+        
+        //============= REQ 4 -  TWO PEOPLE YELLING ============================//
+        else if (name.length > 1) {
+            return name[0] + " and" + name[1] + " are yelling";
+
+        }
                            
         //============= REQ 1 -  FIRST LETTER IN UPPERCASE ======================//
         boolean isUpperCase = Character.isUpperCase(name[0].charAt(0));
@@ -36,11 +42,7 @@ public class Yelling {
         else if (name[0].equals(name[0].toUpperCase())) {
             return name[0] + " IS YELLING";
         } //============= REQ 3 -  NO BODY YELLING ============================//
-        //============= REQ 4 -  TWO PEOPLE YELLING ============================//
-        else if (name[0] != null && name[1] != null && name.length == 2) {
-            return name[0] + " and" + name[1] + " are yelling";
-
-        } //============ REQ 5 -  MULTIPLE PEOPLE YELLING ========================//
+         //============ REQ 5 -  MULTIPLE PEOPLE YELLING ========================//
         else if (name.length > 2 && name.length < 5) {
             int length = name.length;
             String names = "";
