@@ -25,7 +25,7 @@ public class Yelling {
         if (name == null) {
             return "Nobody is yelling";
         }
-
+                           
         //============= REQ 1 -  FIRST LETTER IN UPPERCASE ======================//
         boolean isUpperCase = Character.isUpperCase(name[0].charAt(0));
         boolean lowercase2 = Character.isLowerCase(name[0].charAt(1));
@@ -37,8 +37,8 @@ public class Yelling {
             return name[0] + " IS YELLING";
         } //============= REQ 3 -  NO BODY YELLING ============================//
         //============= REQ 4 -  TWO PEOPLE YELLING ============================//
-        else if (name[0] != null && name[1] != null) {
-            return name[0] + "and" + name[1] + "are yelling";
+        else if (name[0] != null && name[1] != null && name.length == 2) {
+            return name[0] + " and" + name[1] + " are yelling";
 
         } //============ REQ 5 -  MULTIPLE PEOPLE YELLING ========================//
         else if (name.length > 2 && name.length < 5) {
