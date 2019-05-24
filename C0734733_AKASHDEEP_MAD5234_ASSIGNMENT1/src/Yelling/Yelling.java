@@ -25,6 +25,7 @@ public class Yelling {
         //============= REQ 1 -  FIRST LETTER IN UPPERCASE ======================//
         boolean isUpperCase = Character.isUpperCase(name[0].charAt(0));
         boolean lowercase2 = Character.isLowerCase(name[0].charAt(1));
+
         if (isUpperCase == true && lowercase2 == true) {
             return name[0] + " is yelling";
         } //============= REQ 2 -  NAME IS UPPERCASE  ============================//
@@ -61,6 +62,6 @@ public class Yelling {
 //            }
 //        }
 //
-      return name[0];
+        return name[0];
     }
 }
