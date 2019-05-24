@@ -42,13 +42,21 @@ public class YellingTest {
      */
     @Test
     public void testScream() {
+        
+        
         System.out.println("scream");
         String name = null;
+        // REQUIREMENT 1
         Yelling instance = new Yelling();
-        
         String result = instance.scream("Peter");
         String expResult = "Peter is yelling";
         assertEquals(expResult, result);
+        
+          // REQUIREMENT 2 
+        result = instance.scream("PETER");
+        expResult = "PETER IS YELLING";
+        assertEquals(expResult, result);
+        
     }
     
 }
