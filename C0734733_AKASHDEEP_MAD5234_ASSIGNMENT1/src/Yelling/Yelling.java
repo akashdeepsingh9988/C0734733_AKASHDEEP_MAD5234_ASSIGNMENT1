@@ -27,6 +27,24 @@ public class Yelling {
             return "Nobody is yelling";
         }
         
+         //============ REQ 5 -  MULTIPLE PEOPLE YELLING ========================//
+        else if (name.length > 2) {
+            int length = name.length;
+            String names = "";
+            System.out.println("Im in requirement 5");
+            System.out.print(name.length);
+            for (int i = 0; i < length; i++) {
+                 names = names + " ," + name[i];
+                if (i == name.length - 1) {
+                    names = names + " and ";
+                }
+               
+            }
+            return names;
+            
+            
+        }
+        
         //============= REQ 4 -  TWO PEOPLE YELLING ============================//
         else if (name.length > 1) {
             return name[0] + " and " + name[1] + " are yelling";
@@ -43,21 +61,7 @@ public class Yelling {
         else if (name[0].equals(name[0].toUpperCase())) {
             return name[0] + " IS YELLING";
         } 
-         //============ REQ 5 -  MULTIPLE PEOPLE YELLING ========================//
-        else if (name.length > 2) {
-            int length = name.length;
-            String names = "";
-            System.out.print(name.length);
-            for (int i = 0; i < length; i++) {
-                if (i == 1) {
-                    names = names + " and ";
-                }
-                names = names + " ," + name[i];
-            }
-            return names;
-            
-            
-        } //======== REQ 6 - MULTIPLE PEOPLE YELLING WITH NAME UPPERCASE AND LOWERCASE ===========//
+         //======== REQ 6 - MULTIPLE PEOPLE YELLING WITH NAME UPPERCASE AND LOWERCASE ===========//
 //        else if (name.length > 2) {
 //            int length = name.length;
 //            String names = "";
