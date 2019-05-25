@@ -49,11 +49,14 @@ public class Yelling {
             String names = "";
             System.out.print(name.length);
             for (int i = 0; i < length; i++) {
-//                if (i == length - 2) {
-//                    names = names + " and ";
-//                }
+                if (i == 1) {
+                    names = names + " and ";
+                }
                 names = names + " ," + name[i];
             }
+            return names;
+            
+            
         } //======== REQ 6 - MULTIPLE PEOPLE YELLING WITH NAME UPPERCASE AND LOWERCASE ===========//
 //        else if (name.length > 2) {
 //            int length = name.length;
