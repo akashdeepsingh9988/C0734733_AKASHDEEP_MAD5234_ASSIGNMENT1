@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * STUDENT NAME : AKASHDEEP SINGH
+ * STUDENT #ID : C0734733
  */
 package Yelling;
 
@@ -17,22 +16,22 @@ import static org.junit.Assert.*;
  * @author Akashdeep Singh
  */
 public class YellingTest {
-    
+
     public YellingTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -42,38 +41,41 @@ public class YellingTest {
      */
     @Test
     public void testScream() {
-        
-        
+
         System.out.println("scream");
         String name = null;
-        // REQUIREMENT 1
+        // TEST CASE 1 -  REQUIREMENT 1
         Yelling instance = new Yelling();
         String result = instance.scream("Peter");
         String expResult = "Peter is yelling";
         assertEquals(expResult, result);
-        
-          // REQUIREMENT 2 
+
+        // TEST CASE 2 - REQUIREMENT 2 
         result = instance.scream("PETER");
         expResult = "PETER IS YELLING";
         assertEquals(expResult, result);
-        
-           // REQUIREMENT 3 
+
+        //TEST CASE 3 -  REQUIREMENT 3 
         result = instance.scream(null);
         expResult = "Nobody is yelling";
         assertEquals(expResult, result);
-        
-              // REQUIREMENT 4
-        result = instance.scream("Jenelle","Kadeem");
+
+        //TEST CASE 4 - REQUIREMENT 4
+        result = instance.scream("Jenelle", "Kadeem");
         expResult = "Jenelle and Kadeem are yelling";
         assertEquals(expResult, result);
-      
-            // REQUIREMENT 5
-        result = instance.scream("Jenelle","Kadeem", "Akash");
+
+        //TEST CASE 5 - REQUIREMENT 5
+        result = instance.scream("Jenelle", "Kadeem", "Akash");
         expResult = "Jenelle,Kadeem and Akash are yelling";
-        System.out.println("result  : "+result);
+       // System.out.println("result  : " + result);
         assertEquals(expResult, result);
-      
-        
+
+        //TEST CASE 6 - REQUIREMENT 6
+        result = instance.scream("AKASH", "Kadeem", "Akash", "Java");
+        expResult = "SO IS AKASH. Kadeem,Akash and Java is yelling";
+        assertEquals(expResult, result);
+
     }
-    
+
 }
