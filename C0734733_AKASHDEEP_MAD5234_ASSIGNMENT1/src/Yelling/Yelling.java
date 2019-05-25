@@ -23,10 +23,11 @@ public class Yelling {
     There is no instruction specified to use particular Data type 
     In this case i am using Varags
      */
+  
     public String scream(String... name) {
 
         
- //============= REQ 3 -  NO BODY YELLING ============================//
+ //============= REQ 3 -  NOBODY YELLING ============================//
         if (name == null) {
             return "Nobody is yelling";
 
@@ -101,3 +102,8 @@ public class Yelling {
         return name[0];
     }
 }
+
+/*
+    There are other methods to solve this problem like method overload but this function
+    producing valid output after refactoring some portion of code.
+*/

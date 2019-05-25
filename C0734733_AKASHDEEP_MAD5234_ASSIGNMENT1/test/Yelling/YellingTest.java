@@ -68,10 +68,12 @@ public class YellingTest {
         //TEST CASE 5 - REQUIREMENT 5
         result = instance.scream("Jenelle", "Kadeem", "Akash");
         expResult = "Jenelle,Kadeem and Akash are yelling";
-       // System.out.println("result  : " + result);
         assertEquals(expResult, result);
 
         //TEST CASE 6 - REQUIREMENT 6
+        /*
+            four inputs with one CAPITAL name
+        */
         result = instance.scream("AKASH", "Kadeem", "Akash", "Java");
         expResult = "SO IS AKASH. Kadeem,Akash and Java is yelling";
         assertEquals(expResult, result);
