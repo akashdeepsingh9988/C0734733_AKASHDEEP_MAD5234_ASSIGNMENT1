@@ -43,8 +43,9 @@ public class Yelling {
                 {
                     names = names + " ," + name[i];
                    
-                    if (i == name.length) {
+                    if (i == name.length-2) {
                     names = names + " and ";
+                    
                 }
                 }
                 
