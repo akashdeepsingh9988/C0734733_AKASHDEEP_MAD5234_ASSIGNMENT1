@@ -34,7 +34,16 @@ public class Yelling {
             System.out.println("Im in requirement 5");
             System.out.print(name.length);
             for (int i = 0; i < length; i++) {
-                 names = names + " ," + name[i];
+                if (i == 0)
+                {
+                    names = name[i];
+                }
+                
+                else
+                {
+                    names = names + " ," + name[i];
+                }
+                
                 if (i == name.length - 1) {
                     names = names + " and ";
                 }
