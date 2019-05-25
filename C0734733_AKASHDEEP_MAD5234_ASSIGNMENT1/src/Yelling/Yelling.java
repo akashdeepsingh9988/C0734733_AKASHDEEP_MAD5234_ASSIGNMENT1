@@ -42,11 +42,13 @@ public class Yelling {
                 else
                 {
                     names = names + " ," + name[i];
-                }
-                
-                if (i == name.length - 1) {
+                   
+                    if (i == name.length) {
                     names = names + " and ";
                 }
+                }
+                
+                
                
             }
             return names;
