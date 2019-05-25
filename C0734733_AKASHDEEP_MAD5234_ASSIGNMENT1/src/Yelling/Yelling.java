@@ -20,49 +20,40 @@ public class Yelling {
     
     There is only parameter in scream function -> name 
      */
-    
     //============= REQ 3 -  NO BODY YELLING ============================//
     public String scream(String... name) {
         if (name == null) {
             return "Nobody is yelling";
-        }
-        
-         //============ REQ 5 -  MULTIPLE PEOPLE YELLING ========================//
+        } //============ REQ 5 -  MULTIPLE PEOPLE YELLING ========================//
         else if (name.length > 2) {
             int length = name.length;
             String names = "";
             System.out.println("Im in requirement 5");
             System.out.print(name.length);
             for (int i = 0; i < length; i++) {
-                if (i == 0)
-                {
+                if (i == 0) {
                     names = name[i];
+                } else {
+                    names = names + "," + name[i];
+
+                    if (i == name.length - 2) {
+                        names = names + " and";
+                        // String str = names.replace("and,", "and");
+                        //System.out.print("string  result : " + str + "\n");
+                    }
                 }
-                
-                else
-                {
-                    names = names + " ," + name[i];
-                   
-                    if (i == name.length-2) {
-                    names = names + " and ";
-                    
-                }
-                }
-                
-                
-               
+
             }
-            return names;
-            
-            
-        }
-        
-        //============= REQ 4 -  TWO PEOPLE YELLING ============================//
+            names = names.replace(" and,", " and ");
+
+            return names+ " are yelling";
+
+        } //============= REQ 4 -  TWO PEOPLE YELLING ============================//
         else if (name.length > 1) {
             return name[0] + " and " + name[1] + " are yelling";
 
         }
-                           
+
         //============= REQ 1 -  FIRST LETTER IN UPPERCASE ======================//
         boolean isUpperCase = Character.isUpperCase(name[0].charAt(0));
         boolean lowercase2 = Character.isLowerCase(name[0].charAt(1));
@@ -72,8 +63,8 @@ public class Yelling {
         } //============= REQ 2 -  NAME IS UPPERCASE  ============================//
         else if (name[0].equals(name[0].toUpperCase())) {
             return name[0] + " IS YELLING";
-        } 
-         //======== REQ 6 - MULTIPLE PEOPLE YELLING WITH NAME UPPERCASE AND LOWERCASE ===========//
+        }
+        //======== REQ 6 - MULTIPLE PEOPLE YELLING WITH NAME UPPERCASE AND LOWERCASE ===========//
 //        else if (name.length > 2) {
 //            int length = name.length;
 //            String names = "";
